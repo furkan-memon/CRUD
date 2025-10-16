@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <div>
+            <div class="logo">Logo</div>
+
+            <div class="sidebar-search">
+                <i class="fas fa-search" style="color: #fff;"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <nav class="nav">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i>Home</a>
+                <a class="nav-link active" href="#"><i class="fas fa-user-tie"></i>Employee</a>
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Messages</a>
+                <a class="nav-link" href="#"><i class="fas fa-chart-line"></i>Reports</a>
+                <a class="nav-link" href="#"><i class="fas fa-project-diagram"></i>Projects</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="terms">
+                Terms of Service<br>
+                &copy; 2025 Company name
+            </div>
+            <div class="user-info">
+                <div class="user-avatar"> <img src="./assets/Max-R_Headshot (1).jpg" width="40px" height="40px" alt="User Avatar"> </div>
+                <div class="username-details">
+                    <div class="username">Username</div>
+                    <div class="user-email">user@email.com</div>
+                </div>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="dashboard-card">
+            <h1 class="welcome-title">Welcome back!</h1>
+
+            <div class="header-bar">
+    <h2 class="section-title">Students' information</h2>
+    <div class="spacer">
+    <div class="action-group">
+        <input type="text" placeholder="Search">
+    </div>
+    <button>Create</button> 
+    </div>
+</div>
+
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>GRID</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>Department</th>
+                <th>Contact Number</th>
+                <th></th> </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Name"><strong>Alex R.</strong></td>
+                <td data-label="Email">alex.r@mail.com</td>
+                <td data-label="Age">21</td>
+                <td data-label="GRID">G1001</td>
+                <td data-label="Gender">Male</td>
+                <td data-label="Course">BSc CS</td>
+                <td data-label="Department">IT</td>
+                <td data-label="Contact Number">(+94) 77 111 2222</td>
+                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+            </tr>
+            <tr>
+                <td data-label="Name"><strong>Sarah K.</strong></td>
+                <td data-label="Email">sarah.k@mail.com</td>
+                <td data-label="Age">20</td>
+                <td data-label="GRID">G1002</td>
+                <td data-label="Gender">Female</td>
+                <td data-label="Course">BBA</td>
+                <td data-label="Department">Management</td>
+                <td data-label="Contact Number">(+94) 77 333 4444</td>
+                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+            </tr>
+            <tr><td data-label="Name"><strong>Liam B.</strong></td><td data-label="Email">liam.b@mail.com</td><td data-label="Age">22</td><td data-label="GRID">G1003</td><td data-label="Gender">Male</td><td data-label="Course">BSc IT</td><td data-label="Department">IT</td><td data-label="Contact Number">(+94) 77 555 6666</td><td><i class="fas fa-ellipsis-v action-dots"></i></td></tr>
+            <tr><td data-label="Name"><strong>Maya V.</strong></td><td data-label="Email">maya.v@mail.com</td><td data-label="Age">19</td><td data-label="GRID">G1004</td><td data-label="Gender">Female</td><td data-label="Course">MSc Fintech</td><td data-label="Department">Finance</td><td data-label="Contact Number">(+94) 77 777 8888</td><td><i class="fas fa-ellipsis-v action-dots"></i></td></tr>
+            <tr><td data-label="Name"><strong>Ethan W.</strong></td><td data-label="Email">ethan.w@mail.com</td><td data-label="Age">21</td><td data-label="GRID">G1005</td><td data-label="Gender">Other</td><td data-label="Course">BA Arts</td><td data-label="Department">Humanities</td><td data-label="Contact Number">(+94) 77 999 0000</td><td><i class="fas fa-ellipsis-v action-dots"></i></td></tr>
+        </tbody>
+    </table>
+</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
