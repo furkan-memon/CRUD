@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management - Ascend Analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div>
+                <div class="logo">Ascend Analytics</div>
+                <div class="sidebar-search">
+                    <i class="fas fa-search" style="color: #fff;"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <nav class="nav">
+                    <a class="nav-link" href="#"><i class="fas fa-home"></i>Home</a>
+                    <a class="nav-link active" href="#"><i class="fas fa-user-tie"></i>Employee</a>
+                    <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Messages</a>
+                    <a class="nav-link" href="#"><i class="fas fa-chart-line"></i>Reports</a>
+                    <a class="nav-link" href="#"><i class="fas fa-project-diagram"></i>Projects</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="user-info">
+                    <div id="username-details">
+                        <div class="username" id="sidebar-username">Username</div>
+                        <div class="user-email" id="sidebar-email">user@email.com</div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="dashboard-card">
+                <h1 class="welcome-title">Welcome back!</h1>
+
+                <div class="header-bar">
+                    <h2 class="section-title">Students' information</h2>
+                    <div class="spacer">
+                        <div class="action-group">
+                            <input type="text" placeholder="Search">
+                        </div>
+                        <button id="add-student-btn"
+                            onclick="document.getElementById('addStudentModal').style.display='flex';">
+                            <i class="fas fa-plus"></i> Add Student
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Age</th>
+                                <th>GRID</th>
+                                <th>Gender</th>
+                                <th>Course</th>
+                                <th>Department</th>
+                                <th>Contact Number</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Name"><strong>Alex R.</strong></td>
+                                <td data-label="Email">alex.r@mail.com</td>
+                                <td data-label="Age">21</td>
+                                <td data-label="GRID">G1001</td>
+                                <td data-label="Gender">Male</td>
+                                <td data-label="Course">BSc CS</td>
+                                <td data-label="Department">IT</td>
+                                <td data-label="Contact Number">(+94) 77 111 2222</td>
+                                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name"><strong>Sarah K.</strong></td>
+                                <td data-label="Email">sarah.k@mail.com</td>
+                                <td data-label="Age">20</td>
+                                <td data-label="GRID">G1002</td>
+                                <td data-label="Gender">Female</td>
+                                <td data-label="Course">BBA</td>
+                                <td data-label="Department">Management</td>
+                                <td data-label="Contact Number">(+94) 77 333 4444</td>
+                                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name"><strong>Liam B.</strong></td>
+                                <td data-label="Email">liam.b@mail.com</td>
+                                <td data-label="Age">22</td>
+                                <td data-label="GRID">G1003</td>
+                                <td data-label="Gender">Male</td>
+                                <td data-label="Course">BSc IT</td>
+                                <td data-label="Department">IT</td>
+                                <td data-label="Contact Number">(+94) 77 555 6666</td>
+                                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name"><strong>Maya V.</strong></td>
+                                <td data-label="Email">maya.v@mail.com</td>
+                                <td data-label="Age">19</td>
+                                <td data-label="GRID">G1004</td>
+                                <td data-label="Gender">Female</td>
+                                <td data-label="Course">MSc Fintech</td>
+                                <td data-label="Department">Finance</td>
+                                <td data-label="Contact Number">(+94) 77 777 8888</td>
+                                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Name"><strong>Ethan W.</strong></td>
+                                <td data-label="Email">ethan.w@mail.com</td>
+                                <td data-label="Age">21</td>
+                                <td data-label="GRID">G1005</td>
+                                <td data-label="Gender">Other</td>
+                                <td data-label="Course">BA Arts</td>
+                                <td data-label="Department">Humanities</td>
+                                <td data-label="Contact Number">(+94) 77 999 0000</td>
+                                <td><i class="fas fa-ellipsis-v action-dots"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="addStudentModal" class="modal-overlay">
+        <div class="modal-content">
+            <header class="modal-header">
+                <h2 class="modal-title">Add New Student</h2>
+                <button class="close-btn"
+                    onclick="document.getElementById('addStudentModal').style.display='none';">&times;</button>
+            </header>
+
+            <form class="student-form-grid">
+
+                <div class="form-group">
+                    <input type="text" id="student-name" placeholder="Student Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="student-email" placeholder="Student Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" id="student-age" placeholder="Age" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="student-grid" placeholder="GRID/Student ID" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="student-gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="student-course">
+                        <option value="" disabled selected>Select Course</option>
+                        <option value="fullstack">Full Stack Development</option>
+                        <option value="backend">Backend Development</option>
+                        <option value="frontend">Frontend Development</option>
+                        <option value="bba">BBA</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select id="student-dept">
+                        <option value="" disabled selected>Select Department</option>
+                        <option value="web">Web Development</option>
+                        <option value="design">Design</option>
+                        <option value="management">Management</option>
+                        <option value="finance">Finance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="student-contact" placeholder="Contact Number" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="save-btn">Save Student</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
